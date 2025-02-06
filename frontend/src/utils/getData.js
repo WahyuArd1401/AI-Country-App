@@ -10,7 +10,7 @@ const GET_CONTINENTS_AND_COUNTRIES = gql`
         name
         capital
         emoji
-        currency
+        currencyF
         native
         languages {
           code
