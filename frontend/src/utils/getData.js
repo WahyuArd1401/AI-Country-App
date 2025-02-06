@@ -8,8 +8,10 @@ const GET_CONTINENTS_AND_COUNTRIES = gql`
       countries {
         code
         name
+        capital
         emoji
         currency
+        native
         languages {
           code
           name
@@ -19,22 +21,4 @@ const GET_CONTINENTS_AND_COUNTRIES = gql`
   }
 `;
 
-const GET_COUNTRY_DETAILS = gql`
-  query GetCountryDetails($code: ID!) {
-    country(code: $code) {
-      code
-      name
-      emoji
-      capital
-      currency
-      languages {
-        name
-      }
-      continent {
-        name
-      }
-    }
-  }
-`;
-
-export { GET_CONTINENTS_AND_COUNTRIES, GET_COUNTRY_DETAILS };
+export { GET_CONTINENTS_AND_COUNTRIES };

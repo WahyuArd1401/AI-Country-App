@@ -109,7 +109,8 @@ const Home = () => {
               onClick={() => handleCountryClick(country)}
               className="border p-4 rounded-lg shadow hover:bg-gray-100 transition cursor-pointer"
             >
-              <h1 className="text-4xl">{country.emoji}</h1>
+              <h1 className="text-4xl text-center font-bold">{country.emoji}</h1>
+              <h1 className="text-lg text-center">{country.name}</h1>
               <p><strong>Currency:</strong> {country.currency || "N/A"}</p>
               <p><strong>Languages:</strong> {country.languages.length > 0 
                 ? country.languages.length > 2 ? `${country.languages.slice(0, 2).map(lang => lang.name).join(", ")}...` : country.languages.map(lang => lang.name).join(", ") 
@@ -134,9 +135,11 @@ const Home = () => {
         {selectedCountry ? (
           <>
             <h1 className="text-4xl mb-2">{selectedCountry.emoji}</h1>
-            <p><strong>Name:</strong> {selectedCountry.name}</p>
-            <p><strong>Currency:</strong> {selectedCountry.currency || "N/A"}</p>
-            <p><strong>Languages:</strong> {selectedCountry.languages.length > 0 
+            <p><strong>Name:     </strong> {selectedCountry.name}</p>
+            <p><strong>Capital:  </strong> {selectedCountry.capital || "N/A"}</p>
+            <p><strong>Currency: </strong> {selectedCountry.currency || "N/A"}</p>
+            <p><strong>Native Name:</strong> {selectedCountry.native || "N/A"}</p>
+            <p><strong>Languages:   </strong> {selectedCountry.languages.length > 0 
               ? selectedCountry.languages.length > 2
                 ? `${selectedCountry.languages.slice(0, 2).map(lang => lang.name).join(", ")}...`
                 : selectedCountry.languages.map(lang => lang.name).join(", ")
@@ -158,7 +161,7 @@ const Home = () => {
                   className="bg-blue-500 text-white px-4 py-2 rounded disabled:opacity-50"
                   disabled={loadingAI}
                 >
-                  {loadingAI ? "Mengirim..." : "Kirim"}
+                  {loadingAI ? "Sending..." : "Send"}
                 </button>
               </form>
               <div
