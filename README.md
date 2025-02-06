@@ -25,16 +25,25 @@ The AI Country App is a web application that provides detailed information about
 - Search for countries by name
 - View detailed information about each country
 - Responsive design for mobile and desktop
+- AI Chat feature for interactive queries
 
 ## Technical Decisions and Architecture
-- **Frontend:** Built with React for a dynamic and responsive user interface.
-- **Backend:** Node.js and Express for handling API requests.
-- **Data Source:** REST Countries API for fetching country data.
-- **State Management:** Redux for managing application state.
-- **Styling:** CSS Modules for scoped and maintainable styles.
+
+### Frontend
+- **React:** Used for building a dynamic and responsive user interface.
+- **Axios:** For making HTTP requests to APIs.
+- **Apollo Client:** For managing GraphQL queries and mutations.
+- **React-Markdown:** For rendering markdown content.
+- **Tailwind CSS & Material UI:** For modern and responsive design.
+
+### Backend
+- **Express.js:** For handling server-side logic and routing.
+
+### AI Integration
+- **OpenAI:** Implemented routing to handle AI Chat feature requests.
 
 ## Future Improvements
 - Add user authentication and profiles
 - Implement caching for API responses to improve performance
 - Add support for multiple languages
-- Improve accessibility features
+- Add animations for enhanced user experience
